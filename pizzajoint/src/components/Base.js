@@ -47,7 +47,13 @@ const Base = ({ addBase, pizza }) => {
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
 
   return (
-    <motion.div className="base container" variants={containerVariants} exit="exit" initial="hidden" animate="visible">
+    <motion.div
+      className="base container"
+      variants={containerVariants}
+      exit="exit"
+      initial="hidden"
+      animate="visible"
+    >
       <h3>Step 1: Choose Your Base</h3>
       <ul>
         {bases.map(base => {
@@ -66,7 +72,12 @@ const Base = ({ addBase, pizza }) => {
       </ul>
 
       {pizza.base && (
-        <motion.div className="next" variants={nextVariants} initial="hidden" animate="visible">
+        <motion.div
+          className="next"
+          variants={nextVariants}
+          initial="hidden"
+          animate="visible"
+        >
           <Link to="/toppings">
             <motion.button variants={buttonVariants} whileHover="hover">
               Next
