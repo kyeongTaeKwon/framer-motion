@@ -32,7 +32,14 @@ const buttonVariants = {
   },
 };
 const Toppings = ({ addTopping, pizza }) => {
-  let toppings = ["mushrooms", "peppers", "onions", "olives", "extra cheese", "tomatoes"];
+  let toppings = [
+    "mushrooms",
+    "peppers",
+    "onions",
+    "olives",
+    "extra cheese",
+    "tomatoes",
+  ];
 
   return (
     <motion.div

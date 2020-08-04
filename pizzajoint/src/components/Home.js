@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Loader from "./Loader";
 const buttonVariants = {
   hover: {
     scale: 1.1,
@@ -27,13 +28,20 @@ const containerVariants = {
 };
 const Home = () => {
   return (
-    <motion.div className="home container" variants={containerVariants} exit="exit" inherit="hidden" animate="visible">
+    <motion.div
+      className="home container"
+      variants={containerVariants}
+      exit="exit"
+      initial="hidden"
+      animate="visible"
+    >
       <h2>Welcome to Pizza Joint</h2>
       <Link to="/base">
         <motion.button variants={buttonVariants} whileHover="hover">
           Create Your Pizza
         </motion.button>
       </Link>
+      <Loader />
     </motion.div>
   );
 };
